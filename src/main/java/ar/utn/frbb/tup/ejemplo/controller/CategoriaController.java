@@ -16,6 +16,7 @@ public class CategoriaController {
 
     @PostMapping
     public Categoria crearCategoria(@RequestBody Categoria categoria) {
+        // categoria.getName() <- validator
         categoriaService.crearCategoria(categoria);
         return categoria;
     }

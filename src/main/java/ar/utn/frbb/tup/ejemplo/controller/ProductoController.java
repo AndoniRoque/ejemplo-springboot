@@ -34,4 +34,6 @@ public class ProductoController {
     public Producto crearProducto(@RequestBody Producto producto) throws NoCategoriasException {
         return productoService.crearProducto(producto);
     }
+
+    // get producto by categoria @Requestparameter category_name=
 }

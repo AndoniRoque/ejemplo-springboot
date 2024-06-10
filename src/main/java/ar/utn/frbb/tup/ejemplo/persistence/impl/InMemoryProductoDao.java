@@ -16,7 +16,7 @@ public class InMemoryProductoDao implements ProductoDao {
     private final CategoriaDao categoriaDao;
     private List<Producto> productos = new ArrayList<>();
 
-    @Autowired
+    @Autowired // Probar sacar @Autowired
     public InMemoryProductoDao(CategoriaDao categoriaDao) {
         this.categoriaDao = categoriaDao;
     }

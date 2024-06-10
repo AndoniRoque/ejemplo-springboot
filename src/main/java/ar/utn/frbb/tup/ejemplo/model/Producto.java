@@ -1,6 +1,5 @@
-package ar.utn.frbb.tup.ejemplo.Model;
+package ar.utn.frbb.tup.ejemplo.model;
 
-import java.util.ArrayList;
 import java.util.Map;
 
 public class Producto {

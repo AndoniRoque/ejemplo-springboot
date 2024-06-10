@@ -1,7 +1,7 @@
-package ar.utn.frbb.tup.ejemplo.Persistencia;
+package ar.utn.frbb.tup.ejemplo.persistence;
 
-import ar.utn.frbb.tup.ejemplo.Model.Producto;
-import ar.utn.frbb.tup.ejemplo.Persistencia.Impl.excepciones.NoCategoriasException;
+import ar.utn.frbb.tup.ejemplo.model.Producto;
+import ar.utn.frbb.tup.ejemplo.model.exception.NoCategoriasException;
 
 import java.util.ArrayList;
 

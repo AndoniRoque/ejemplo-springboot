@@ -1,10 +1,10 @@
-package ar.utn.frbb.tup.ejemplo.Service.impl;
+package ar.utn.frbb.tup.ejemplo.service.impl;
 
-import ar.utn.frbb.tup.ejemplo.Model.Producto;
-import ar.utn.frbb.tup.ejemplo.Persistencia.Impl.excepciones.NoCategoriasException;
-import ar.utn.frbb.tup.ejemplo.Persistencia.ProductoDao;
-import ar.utn.frbb.tup.ejemplo.Service.ProductoService;
-import ar.utn.frbb.tup.ejemplo.Service.impl.excepciones.ItemNoEncontradoException;
+import ar.utn.frbb.tup.ejemplo.model.Producto;
+import ar.utn.frbb.tup.ejemplo.model.exception.NoCategoriasException;
+import ar.utn.frbb.tup.ejemplo.persistence.ProductoDao;
+import ar.utn.frbb.tup.ejemplo.service.ProductoService;
+import ar.utn.frbb.tup.ejemplo.service.impl.excepciones.ItemNoEncontradoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

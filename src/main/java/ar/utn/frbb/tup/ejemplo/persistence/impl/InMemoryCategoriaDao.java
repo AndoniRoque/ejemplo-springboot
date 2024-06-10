@@ -1,7 +1,7 @@
-package ar.utn.frbb.tup.ejemplo.Persistencia.Impl;
+package ar.utn.frbb.tup.ejemplo.persistence.impl;
 
-import ar.utn.frbb.tup.ejemplo.Model.Categoria;
-import ar.utn.frbb.tup.ejemplo.Persistencia.CategoriaDao;
+import ar.utn.frbb.tup.ejemplo.model.Categoria;
+import ar.utn.frbb.tup.ejemplo.persistence.CategoriaDao;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

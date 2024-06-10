@@ -1,10 +1,10 @@
-package ar.utn.frbb.tup.ejemplo.Persistencia.Impl;
+package ar.utn.frbb.tup.ejemplo.persistence.impl;
 
-import ar.utn.frbb.tup.ejemplo.Model.Categoria;
-import ar.utn.frbb.tup.ejemplo.Model.Producto;
-import ar.utn.frbb.tup.ejemplo.Persistencia.CategoriaDao;
-import ar.utn.frbb.tup.ejemplo.Persistencia.Impl.excepciones.NoCategoriasException;
-import ar.utn.frbb.tup.ejemplo.Persistencia.ProductoDao;
+import ar.utn.frbb.tup.ejemplo.model.Categoria;
+import ar.utn.frbb.tup.ejemplo.model.Producto;
+import ar.utn.frbb.tup.ejemplo.persistence.CategoriaDao;
+import ar.utn.frbb.tup.ejemplo.model.exception.NoCategoriasException;
+import ar.utn.frbb.tup.ejemplo.persistence.ProductoDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

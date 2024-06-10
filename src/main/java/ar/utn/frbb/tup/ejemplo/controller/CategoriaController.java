@@ -1,14 +1,12 @@
-package ar.utn.frbb.tup.ejemplo.Controller;
+package ar.utn.frbb.tup.ejemplo.controller;
 
-import ar.utn.frbb.tup.ejemplo.Model.Categoria;
-import ar.utn.frbb.tup.ejemplo.Model.Producto;
-import ar.utn.frbb.tup.ejemplo.Service.CategoriaService;
-import ar.utn.frbb.tup.ejemplo.Service.impl.excepciones.ItemNoEncontradoException;
+import ar.utn.frbb.tup.ejemplo.model.Categoria;
+import ar.utn.frbb.tup.ejemplo.service.CategoriaService;
+import ar.utn.frbb.tup.ejemplo.service.impl.excepciones.ItemNoEncontradoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.Map;
+import java.util.List;
 
 @RestController
 @RequestMapping("/categoria")
@@ -27,13 +25,13 @@ public class CategoriaController {
         this.categoriaService = categoriaService;
     }
 
-    @GetMapping("/todas")
-    public ArrayList<Categoria> getAllCategorias() {
+    @GetMapping("/")
+    public List<Categoria> getAllCategorias() {
         return categoriaService.getAllCategorias();
     }
 
-    @GetMapping("/porId")
-    public Categoria getCategoria(@RequestParam int id) throws ItemNoEncontradoException {
+    @GetMapping("/{categoriaId}")
+    public Categoria getCategoria(@PathVariable int id) throws ItemNoEncontradoException {
         return categoriaService.getCategoria(id);
     }
 }

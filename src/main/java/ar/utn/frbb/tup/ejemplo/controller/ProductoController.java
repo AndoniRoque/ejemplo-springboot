@@ -3,7 +3,7 @@ package ar.utn.frbb.tup.ejemplo.controller;
 import ar.utn.frbb.tup.ejemplo.model.Producto;
 import ar.utn.frbb.tup.ejemplo.model.exception.NoCategoriasException;
 import ar.utn.frbb.tup.ejemplo.service.ProductoService;
-import ar.utn.frbb.tup.ejemplo.service.impl.excepciones.ItemNoEncontradoException;
+import ar.utn.frbb.tup.ejemplo.model.exception.ItemNoEncontradoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

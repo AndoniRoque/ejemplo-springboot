@@ -9,11 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Component
 public class InMemoryProductoDao implements ProductoDao {
     private final CategoriaDao categoriaDao;
-    private ArrayList<Producto> productos = new ArrayList<>();
+    private List<Producto> productos = new ArrayList<>();
 
     @Autowired
     public InMemoryProductoDao(CategoriaDao categoriaDao) {
@@ -21,7 +22,7 @@ public class InMemoryProductoDao implements ProductoDao {
     }
 
     @Override
-    public ArrayList<Producto> findAllProductos() {
+    public List<Producto> findAllProductos() {
         return productos;
     }
 

@@ -3,11 +3,12 @@ package ar.utn.frbb.tup.ejemplo.service.impl;
 import ar.utn.frbb.tup.ejemplo.model.Categoria;
 import ar.utn.frbb.tup.ejemplo.persistence.CategoriaDao;
 import ar.utn.frbb.tup.ejemplo.service.CategoriaService;
-import ar.utn.frbb.tup.ejemplo.service.impl.excepciones.ItemNoEncontradoException;
+import ar.utn.frbb.tup.ejemplo.model.exception.ItemNoEncontradoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class CategoriaServiceImpl implements CategoriaService {
@@ -35,7 +36,7 @@ public class CategoriaServiceImpl implements CategoriaService {
     }
 
     @Override
-    public ArrayList<Categoria> getAllCategorias() {
+    public List<Categoria> getAllCategorias() {
         return categoriaDao.findAllCategorias();
     }
 }

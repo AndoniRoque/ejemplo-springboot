@@ -5,13 +5,14 @@ import ar.utn.frbb.tup.ejemplo.persistence.CategoriaDao;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Component
 public class InMemoryCategoriaDao implements CategoriaDao {
-    private ArrayList<Categoria> categorias = new ArrayList<>();
+    private List<Categoria> categorias = new ArrayList<>();
 
     @Override
-    public ArrayList<Categoria> findAllCategorias() {
+    public List<Categoria> findAllCategorias() {
         return categorias;
     }
 

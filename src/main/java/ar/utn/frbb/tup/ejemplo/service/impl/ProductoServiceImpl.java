@@ -4,11 +4,11 @@ import ar.utn.frbb.tup.ejemplo.model.Producto;
 import ar.utn.frbb.tup.ejemplo.model.exception.NoCategoriasException;
 import ar.utn.frbb.tup.ejemplo.persistence.ProductoDao;
 import ar.utn.frbb.tup.ejemplo.service.ProductoService;
-import ar.utn.frbb.tup.ejemplo.service.impl.excepciones.ItemNoEncontradoException;
+import ar.utn.frbb.tup.ejemplo.model.exception.ItemNoEncontradoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
+import java.util.List;
 
 @Component
 public class ProductoServiceImpl implements ProductoService {
@@ -26,7 +26,7 @@ public class ProductoServiceImpl implements ProductoService {
     }
 
     @Override
-    public ArrayList<Producto> getAllProductos() {
+    public List<Producto> getAllProductos() {
         return productoDao.findAllProductos();
     }
 

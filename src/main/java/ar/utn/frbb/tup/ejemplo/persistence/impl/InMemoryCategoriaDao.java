@@ -39,6 +39,16 @@ public class InMemoryCategoriaDao implements CategoriaDao {
         return null;
     }
 
+    @Override
+    public Categoria findByName(String name) {
+        for(Categoria categoria : categorias){
+            if(categoria.getNombre().equalsIgnoreCase(name)){
+                return categoria;
+            }
+        }
+        return null;
+    }
+
 
 
 }

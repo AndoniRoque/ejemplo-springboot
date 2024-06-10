@@ -8,4 +8,5 @@ public interface CategoriaDao {
     Categoria crearCategoria(Categoria categoria);
     Categoria findById(int id);
     ArrayList<Categoria> findAllCategorias();
+    Categoria findByName(String name);
 }

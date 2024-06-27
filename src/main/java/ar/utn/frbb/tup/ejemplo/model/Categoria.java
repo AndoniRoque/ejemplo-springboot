@@ -1,6 +1,7 @@
 package ar.utn.frbb.tup.ejemplo.model;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Categoria {
     private int id;
@@ -12,6 +13,9 @@ public class Categoria {
         this.id = id;
         this.nombre = name;
         this.descripcion = descripcion;
+    }
+
+    public Categoria(){
     }
 
     public int getId() {
@@ -44,5 +48,18 @@ public class Categoria {
 
     public void setListProductos(ArrayList<Producto> listProductos) {
         this.listProductos = listProductos;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Categoria categoria = (Categoria) o;
+        return id == categoria.id && nombre.equals(categoria.nombre) && descripcion.equals(categoria.descripcion) && Objects.equals(listProductos, categoria.listProductos);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, nombre);
     }
 }

@@ -15,10 +15,9 @@ public class CategoriaController {
     private CategoriaService categoriaService;
 
     @PostMapping
-    public Categoria crearCategoria(@RequestBody Categoria categoria) {
+    public Categoria crearCategoria(@RequestBody CategoriaDto categoria) {
         // categoria.getName() <- validator
-        categoriaService.crearCategoria(categoria);
-        return categoria;
+        return categoriaService.crearCategoria(categoria);
     }
 
     @Autowired
@@ -35,4 +34,6 @@ public class CategoriaController {
     public Categoria getCategoria(@PathVariable int id) throws ItemNoEncontradoException {
         return categoriaService.getCategoria(id);
     }
+
+
 }

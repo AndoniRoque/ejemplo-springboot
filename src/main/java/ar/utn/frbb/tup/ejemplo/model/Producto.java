@@ -1,6 +1,7 @@
 package ar.utn.frbb.tup.ejemplo.model;
 
 import java.util.Map;
+import java.util.Objects;
 
 public class Producto {
     private int id;
@@ -66,5 +67,18 @@ public class Producto {
                 ", precio=" + precio +
                 ", especificiaciones=" + especificaciones +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Producto producto = (Producto) o;
+        return id == producto.id && nombre.equals(producto.nombre) && precio.equals(producto.precio) && Objects.equals(category_name, producto.category_name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, nombre, precio, category_name);
     }
 }
